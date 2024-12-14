@@ -30,6 +30,7 @@ function App() {
               <Route path="/login" element={<Adminlogin />} />
               <Route path="/signup" element={<Adminsignup />} />
               <Route path="/" element={<Feeds />} />
+              <Route path="/explore/:search" element={<Explore />} />
               <Route path="/explore" element={<Explore />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/guides" element={<Guides />} />

@@ -10,6 +10,13 @@ function Navbar() {
   const [isSearchVisible, setIsSearchVisible] = useState(false);
   const navigate = useNavigate();
 
+
+  const handlesearch = (e)=>{
+    if(e.key === 'Enter'){
+      navigate(`/explore/${e.target.value}`);
+    }
+  }
+
   const handleLogout = async () => {
     try {
       await Axios.get('http://localhost:4999/logout', { withCredentials: true });
@@ -60,6 +67,7 @@ function Navbar() {
             type="search"
             placeholder="Search for any blog..."
             className="bg-transparent outline-none text-white w-full placeholder-gray-400"
+            onKeyDown={handlesearch}
           />
         </div>
 
