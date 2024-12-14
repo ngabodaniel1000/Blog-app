@@ -150,22 +150,35 @@ exports.getPostDetails = async (req, res) => {
         res.status(500).send(error);
     }
 };
-exports.getallposts = async(req,res)=>{
+exports.getallposts = async(req, res) => {
     const limit = parseInt(req.query.limit) || 10;
-    try{
-        const posts = await Post.find()
+    const key = req.query.key;
+    try {
+        if (key) {
+            const posts = await Post.find({
+                $or: [
+                    { posttitle: { $regex: key, $options: "i" } },
+                    { postcontent: { $regex: key, $options: "i" } },
+                ]
+            })
             .populate('userposted', 'username email')
             .limit(limit)
             .sort({ _id: -1 });
-        res.status(200).json({posts});
-    }catch(error){
+            res.status(200).json({ posts });
+        } else {
+            const posts = await Post.find()
+            .populate('userposted', 'username email')
+            .limit(limit)
+            .sort({ _id: -1 });
+            res.status(200).json({ posts });
+        }
+    } catch (error) {
         res.status(500).send(error);
     }
 }
 exports.getmypost = async(req,res)=>{
     const id = req.query.userid
     try {
-        
         const mypost = await Post.find({userposted:req.session.userId})
             .populate('userposted', 'username email');
             res.status(200).json({mypost});

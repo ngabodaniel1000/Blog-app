@@ -182,7 +182,7 @@ const Feeds = () => {
   );
 
   return (
-    <div className="flex flex-col md:flex-row mt-5 bg-[#000005] overflow-y-auto h-full w-full">
+    <div className="flex flex-col md:flex-row ml-5 bg-[#000005] overflow-y-auto h-full w-full">
       <ToastContainer />
       <div className='w-full md:w-[70%] px-4'>
         {isLoggedIn && (
@@ -242,38 +242,7 @@ const Feeds = () => {
           </>
         )}
       </div>
-      <div className="w-[30%] h-[90vh] hidden md:flex bg-gray-800 bg-opacity-10 p-4">
-   <div className="flex-col">
-  <h2 className="text-2xl font-bold mb-4">MERN Blog Documentation</h2>
-  <ul className="list-disc pl-4 space-y-2">
-    <li>
-      <strong>Frontend:</strong> Built with React.js to provide a dynamic and responsive user interface.
-    </li>
-    <li>
-      <strong>Backend:</strong> Powered by Node.js and Express.js to handle API requests and manage business logic.
-    </li>
-    <li>
-      <strong>Database:</strong> MongoDB is used for storing and retrieving blog posts and user data.
-    </li>
-    <li>
-      <strong>Features:</strong>
-      <ul className="list-inside list-disc space-y-1">
-        <li>Create, read, update, and delete (CRUD) blog posts.</li>
-        <li>User authentication and authorization for secure access.</li>
-        <li>Responsive design with mobile and desktop compatibility.</li>
-      </ul>
-    </li>
-    <li>
-      <strong>Hosting:</strong> Frontend hosted on Vercel and backend on Render for a seamless user experience.
-    </li>
-    <li>
-      <strong>API Configuration:</strong> Environment variable `REACT_APP_API_URL` used for API endpoints.
-    </li>
-  </ul>
-
-   </div>
-</div>
-
+     
     </div>
   );
 }
