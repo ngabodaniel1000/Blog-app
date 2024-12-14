@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHeart, faComment, faUser, faClock } from '@fortawesome/free-solid-svg-icons';
+import { faHeart, faComment, faUser, faClock, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
 
 function PostDetails() {
     const { postId } = useParams();
@@ -70,6 +70,50 @@ function PostDetails() {
             }
             }
         }
+        const handlelike = async (postId) => {
+            try {
+              const response = await axios.put(`http://localhost:4999/post/like/${postId}`, {}, { withCredentials: true });
+              if (response.data.message === "Unauthorized to this api") {
+                toast.error("Please sign in to like the post!", {
+                  position: "top-right",
+                  autoClose: 10000,
+                  hideProgressBar: false,
+                  pauseOnHover: true,
+                  draggable: true,
+                });
+                return;
+              }
+              if (response.data.message === "You have already liked this post") {
+                toast.warning(response.data.message, {
+                  position: "top-right",
+                  autoClose: 10000,
+                  hideProgressBar: false,
+                  pauseOnHover: true,
+                  draggable: true,
+                  theme: 'light'
+                });
+              } else {
+                setPostData(postsdata.map(post => post._id === postId ? { ...post, postlikes: post.postlikes + 1 } : post));
+                toast.success("Post liked!", {
+                  position: "top-right",
+                  autoClose: 10000,
+                  hideProgressBar: true,
+                  pauseOnHover: true,
+                  draggable: true,
+                });
+              }
+            } catch (error) {
+              console.error('Error liking post:', error);
+              toast.error("Failed to like post. Login to like the post!", {
+                position: "bottom-right",
+                autoClose: 10000,
+                hideProgressBar: false,
+                pauseOnHover: true,
+                draggable: true,
+              });
+            }
+          };
+        
            
 
     if (loading) {
@@ -108,7 +152,7 @@ function PostDetails() {
                     {/* Engagement Metrics */}
                     <div className="flex items-center space-x-4 text-gray-400">
                         <div className="flex items-center space-x-2">
-                            <FontAwesomeIcon icon={faHeart} className="w-5 h-5 text-red-500" />
+                            <FontAwesomeIcon onClick={() => handlelike(postdata._id)} icon={faThumbsUp} className="text-red-400 cursor-pointer text-xl" />
                             <span>{postdata.postlikes} Likes</span>
                         </div>
                         <div className="flex items-center space-x-2">

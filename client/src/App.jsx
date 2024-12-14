@@ -17,6 +17,7 @@ import CreateBlogPost from './components/CreateBlogPost';
 import PostDetails from './components/PostDetails';
 import Myblog from './components/Myblog';
 import Footer from './components/Footer';
+import Explorepost from './components/Explorepost';
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
               <Route path="/signup" element={<Adminsignup />} />
               <Route path="/" element={<Feeds />} />
               <Route path="/explore/:search" element={<Explore />} />
+              <Route path="/explore/post/:search" element={<Explorepost />} />
               <Route path="/explore" element={<Explore />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/guides" element={<Guides />} />
