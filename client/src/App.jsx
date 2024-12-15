@@ -18,6 +18,7 @@ import PostDetails from './components/PostDetails';
 import Myblog from './components/Myblog';
 import Footer from './components/Footer';
 import Explorepost from './components/Explorepost';
+import Exploreuser from './components/Exploreuser';
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
               <Route path="/" element={<Feeds />} />
               <Route path="/explore/:search" element={<Explore />} />
               <Route path="/explore/post/:search" element={<Explorepost />} />
+              <Route path="/explore/user/:search" element={<Exploreuser />} />
               <Route path="/explore" element={<Explore />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/guides" element={<Guides />} />

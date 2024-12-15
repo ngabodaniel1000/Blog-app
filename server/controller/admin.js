@@ -176,6 +176,30 @@ exports.getallposts = async(req, res) => {
         res.status(500).send(error);
     }
 }
+exports.getusers = async(req, res) => {
+    const limit = parseInt(req.query.limit) || 10;
+    const key = req.query.key;
+    try {
+        if (key) {
+            const users = await User.find({
+                $or: [
+                    { username: { $regex: key, $options: "i" } },     
+                ]
+            })
+            .sort({ _id: -1 });
+            if (users.length === 0) {
+                return res.status(404).send("User not found");
+            }
+            res.status(200).json({ users });
+        } else {
+            const users = await User.find()
+            .sort({ _id: -1 });
+            res.status(200).json({ users });
+        }
+    } catch (error) {
+        res.status(500).send(error);
+    }
+}
 exports.getmypost = async(req,res)=>{
     const id = req.query.userid
     try {

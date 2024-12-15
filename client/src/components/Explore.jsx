@@ -19,7 +19,7 @@ function Explore() {
             </li>
             <li>
               <a
-                href={`/explore/people/${search}`}
+                href={`/explore/user/${search}`}
                 className="text-blue-500 hover:underline text-lg"
               >
                 Explore People

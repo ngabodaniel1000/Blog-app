@@ -17,6 +17,7 @@ router.get("/dashboard",  controller.dashboard);
 // Route to get details of a single post by ID
 router.get("/post/:postId", controller.getPostDetails);
 router.get("/getallposts", controller.getallposts);
+router.get("/getuserposts", controller.getusers);
 router.get("/gettopposts", controller.gettopposts);
 
 router.put('/post/like/:postId', controller.ensureAuthenticated, controller.likePost);
