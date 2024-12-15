@@ -34,7 +34,7 @@ function Exploreuser() {
               {users.map((user) => (
                 <li key={user._id}>
                   <a
-                    href={`/profile/${user._id}`}
+                    href={`/explore/user/post/${user.username}/${user._id}`}
                     className="text-blue-500 hover:underline text-lg"
                   >
                     {user.username}

@@ -17,6 +17,7 @@ router.get("/dashboard",  controller.dashboard);
 // Route to get details of a single post by ID
 router.get("/post/:postId", controller.getPostDetails);
 router.get("/getallposts", controller.getallposts);
+router.get("/getuserposts/:userid", controller.getuserposts);
 router.get("/getusers", controller.getusers);
 router.get("/gettopposts", controller.gettopposts);
 

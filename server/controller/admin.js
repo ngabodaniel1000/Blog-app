@@ -150,6 +150,26 @@ exports.getPostDetails = async (req, res) => {
         res.status(500).send(error);
     }
 };
+exports.getuserposts = async(req, res) => {
+    const limit = parseInt(req.query.limit) || 10;
+    const key = req.params.userid;
+    try {
+            const posts = await Post.find(
+                {userposted: key}
+            )
+            .populate('userposted', 'username email')
+            .limit(limit)
+            .sort({ _id: -1 });
+
+            if (posts.length === 0) {
+                return res.status(404).send("User not found");
+            }
+            res.status(200).json({ posts });
+        
+    } catch (error) {
+        res.status(500).send(error);
+    }
+}
 exports.getallposts = async(req, res) => {
     const limit = parseInt(req.query.limit) || 10;
     const key = req.query.key;
