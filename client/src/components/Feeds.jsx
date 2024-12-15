@@ -63,73 +63,8 @@ const Feeds = () => {
     fetchData();
   }, [limit]);
 
-  const handleInputChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
-  };
 
-  const handlesubmit = async (e) => {
-    e.preventDefault();
-    if (!formData.postcontent) {
-      toast.error("Contents for the post are required!", {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        pauseOnHover: true,
-        draggable: true,
-      });
-      return;
-    }
-
-    const postData = {
-      posttitle: formData.posttitle,
-      postcontent: formData.postcontent,
-      imageUrl: formData.image,
-    };
-
-    try {
-      const response = await Axios.post(
-        `http://localhost:4999/createpost/${userid}`,
-        postData,
-        {
-          withCredentials: true,
-          headers: {
-            'Content-Type': 'application/json',
-          },
-        }
-      );
-
-      if (response.data) {
-        setFormData({ posttitle: '', postcontent: '', image: null });
-        toast.success("Post created successfully!", {
-          position: "top-right",
-          autoClose: 3000,
-          hideProgressBar: false,
-          pauseOnHover: true,
-          draggable: true,
-        });
-        navigate('/');
-      }
-    } catch (err) {
-      console.error('Error creating post:', err);
-      toast.error("Failed to create post. Please try again later.", {
-        position: "top-right",
-        autoClose: 5000,
-        hideProgressBar: false,
-        pauseOnHover: true,
-        draggable: true,
-      });
-    }
-  };
-
-  const handleKeyDown = (e) => {
-    if (e.key === 'Enter') {
-      handlesubmit(e);
-    }
-  };
-
+ 
   const handleLike = async (postId) => {
     try {
       const response = await Axios.put(`http://localhost:4999/post/like/${postId}`, {}, { withCredentials: true });
@@ -182,22 +117,9 @@ const Feeds = () => {
   );
 
   return (
-    <div className="flex flex-col md:flex-row ml-5 bg-[#000005] overflow-y-auto h-full w-full">
+    <div className="flex flex-col md:flex-row mt-5 bg-[#000005] overflow-y-auto h-full w-full">
       <ToastContainer />
       <div className='w-full md:w-[70%] px-4'>
-        {isLoggedIn && (
-          <div className="mb-4">
-            <input
-              type="text"
-              name="postcontent"
-              placeholder={`What's on your mind, ${username}?`}
-              className="w-full bg-[#191919] text-white text-xl p-3 rounded placeholder-gray-400"
-              value={formData.postcontent}
-              onChange={handleInputChange}
-              onKeyDown={handleKeyDown}
-            />
-          </div>
-        )}
   
         {loading ? (
           <LoadingSpinner />
@@ -242,7 +164,6 @@ const Feeds = () => {
           </>
         )}
       </div>
-     
     </div>
   );
 }

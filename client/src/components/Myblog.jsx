@@ -69,7 +69,7 @@ const handleLike = async (postId) => {
     <ToastContainer />
     <div><h1 className='text-2xl md:ml-[450px] mb-5'>My latest blogs</h1></div>
               {myblog.map((post) => (
-                <div key={post._id} className="bg-[#191919] p-4 rounded-md">
+                <div key={post._id} className="bg-[#191919] mt-5 p-4 rounded-md">
                   {post.imageUrl && (
                     <img
                       src={post.imageUrl}
