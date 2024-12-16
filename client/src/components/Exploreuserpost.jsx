@@ -84,57 +84,59 @@ function Exploreuserpost() {
 
         
           return (
-            <div className="flex flex-col md:flex-row mt-5 bg-[#000005] overflow-y-auto h-full w-full">
-              <ToastContainer />
-              <div className='w-full md:w-[70%] px-4'>
-          
-                {loading ? (
-                  <LoadingSpinner />
-                ) : (
-                  <>
-                    <div className="space-y-10">
-                        <h1 className='md:ml-[300px] text-2xl'>View {username} post</h1>
-                      {postsdata.map((post) => (
-                        <div key={post._id} className="bg-[#191919] p-4 rounded-md">
-                          {post.imageUrl && (
-                            <img
-                              src={post.imageUrl}
-                              alt={post.posttitle}
-                              className="w-full h-auto mb-4 rounded"
-                            />
-                          )}
-                          <h3 className="text-xl font-bold text-white mb-2">
-                            {post.posttitle === "Untitled" ? ' ' : post.posttitle }
-                          </h3>
-                          <p className="text-gray-300 mb-2">{post.postcontent}</p>
-          
-                          <div className="flex items-center space-x-4 mb-2">
+            <div>
+              <div className="flex flex-col md:flex-row mt-5  bg-[#000005] overflow-y-auto h-full w-full">
+                <ToastContainer />
+                <div className='w-full md:w-[70%] px-4'>
+            
+                  {loading ? (
+                    <LoadingSpinner />
+                  ) : (
+                    <>
+                      <div className="space-y-10">
+                          <h1 className='md:ml-[300px] text-2xl'>View {username} post</h1>
+                        {postsdata.map((post) => (
+                          <div key={post._id} className="bg-[#191919] p-4 rounded-md">
+                            {post.imageUrl && (
+                              <img
+                                src={post.imageUrl}
+                                alt={post.posttitle}
+                                className="w-full h-auto mb-4 rounded"
+                              />
+                            )}
+                            <h3 className="text-xl font-bold text-white mb-2">
+                              {post.posttitle === "Untitled" ? ' ' : post.posttitle }
+                            </h3>
+                            <p className="text-gray-300 mb-2">{post.postcontent}</p>
+            
+                            <div className="flex items-center space-x-4 mb-2">
+                              
+                              <div className="flex items-center space-x-2">
+                                <FontAwesomeIcon onClick={() => handleLike(post._id)} icon={faThumbsUp} className="text-red-400 cursor-pointer text-xl" />
+                                <span className="text-gray-400">{post.postlikes}</span>
+                              </div>
+                              <div className="flex items-center space-x-2">
+                                <FontAwesomeIcon icon={faComment} className="text-gray-400" />
+                                <span className="text-gray-400">{post.postcomments.length}  {post.postcomments.length <= 1 ? "comment":"Comments"}</span>
+                              </div>
                             
-                            <div className="flex items-center space-x-2">
-                              <FontAwesomeIcon onClick={() => handleLike(post._id)} icon={faThumbsUp} className="text-red-400 cursor-pointer text-xl" />
-                              <span className="text-gray-400">{post.postlikes}</span>
                             </div>
-                            <div className="flex items-center space-x-2">
-                              <FontAwesomeIcon icon={faComment} className="text-gray-400" />
-                              <span className="text-gray-400">{post.postcomments.length}  {post.postcomments.length <= 1 ? "comment":"Comments"}</span>
-                            </div>
-                          
+                            <Link to={`/post/${post._id}`} className="w-full max-w-[200px]">
+                              <button className="bg-blue-500 text-white px-4 py-2 rounded w-full">
+                                Read more
+                              </button>
+                            </Link>
                           </div>
-                          <Link to={`/post/${post._id}`} className="w-full max-w-[200px]">
-                            <button className="bg-blue-500 text-white px-4 py-2 rounded w-full">
-                              Read more
-                            </button>
-                          </Link>
-                        </div>
-                      ))}
-                    </div>
-          
-                  </>
-                )}
+                        ))}
+                      </div>
+            
+                    </>
+                  )}
+                </div>
+                <div className="w-[30%] h-[90vh] hidden md:flex bg-gray-800 bg-opacity-10 p-4">
+          </div>
               </div>
-              <div className="w-[30%] h-[90vh] hidden md:flex bg-gray-800 bg-opacity-10 p-4">
-        </div>
-            </div>
+              </div>
           );
         
 }

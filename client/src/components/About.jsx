@@ -1,113 +1,100 @@
-import React from 'react';
+import React from "react";
+import { FaUser, FaShieldAlt, FaCookieBite, FaHandsHelping, FaRocket } from "react-icons/fa";
 
-// Dummy team member data
 function About() {
   const teamMembers = [
     {
       name: "Alex Rodriguez",
       role: "Founder & CEO",
       bio: "Passionate developer with 10+ years of experience in web technologies and startup growth.",
-      image: "/api/placeholder/200/200",
+      image: "https://via.placeholder.com/150", 
     },
     {
       name: "Sarah Chen",
       role: "Chief Technology Officer",
       bio: "Expert in MERN stack development and machine learning innovations.",
-      image: "/api/placeholder/200/200",
+      image: "https://via.placeholder.com/150", 
     },
     {
       name: "Michael Thompson",
       role: "Lead Content Strategist",
       bio: "Content guru with a knack for creating engaging and informative tech narratives.",
-      image: "/api/placeholder/200/200",
+      image: "https://via.placeholder.com/150",
     },
     {
       name: "Emma Kaur",
       role: "Design & User Experience Lead",
       bio: "Design thinking expert focused on creating intuitive and beautiful digital experiences.",
-      image: "/api/placeholder/200/200",
+      image: "https://via.placeholder.com/150",
     },
   ];
 
   return (
     <div>
       {/* Main Content */}
-      <div className="w-full p-4 bg-[#F5F5F5] md:p-8 lg:max-w-screen-lg mx-auto">
+      <div className="w-full p-6 bg-[#F5F5F5] md:p-8 mt-5 lg:max-w-screen-lg mx-auto">
         {/* Header Section */}
-        <section className="text-center mb-12 shadow-md ml-7">
-          <h1 className="text-4xl font-bold mb-4 text-pink-400">About Our Platform</h1>
+        <section className="text-center mb-8 ml-7 shadow-md px-4">
+          <h1 className="text-4xl font-bold mb-4 text-pink-700">About Our Platform</h1>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            We are a community of passionate developers, writers, and tech enthusiasts 
-            dedicated to sharing knowledge, inspiring innovation, and connecting 
-            technology professionals worldwide.
+            We are a community of passionate developers, writers, and tech enthusiasts dedicated to
+            sharing knowledge, inspiring innovation, and connecting technology professionals worldwide.
           </p>
         </section>
 
-        {/* Mission Section */}
-        <section className="mb-12 shadow-md px-4 ml-7">
-          <h2 className="text-3xl font-semibold text-center mb-8 text-pink-400">Our Mission</h2>
-          <div className="max-w-4xl mx-auto bg-gray-100 rounded-lg p-6 shadow-sm leading-relaxed">
-            <p className="text-gray-700">
-              Our mission is to create an inclusive platform that empowers developers, 
-              designers, and tech professionals to share their insights, learn from each other, 
-              and stay at the forefront of technological innovation. We believe in the power 
-              of community-driven knowledge and continuous learning.
+        {/* Mission Section with Illustrative Icon */}
+        <section className="mb-8 ml-7 shadow-md px-6 py-6 bg-pink-100 rounded-lg flex items-center gap-4">
+          <FaHandsHelping className="text-6xl text-pink-700" />
+          <div>
+            <h2 className="text-3xl font-semibold mb-2 text-gray-800">Our Mission</h2>
+            <p className="text-gray-700 leading-relaxed">
+              Our mission is to empower developers and tech enthusiasts to learn, share insights, and grow together through a collaborative platform.
             </p>
           </div>
         </section>
 
-        {/* Story Section */}
-        <section className="mb-12 shadow-md px-4 ml-7">
-          <h2 className="text-3xl font-semibold text-center mb-8 text-pink-400">Our Story</h2>
-          <div className="max-w-4xl mx-auto bg-gray-100 rounded-lg p-6 shadow-sm text-gray-700 leading-relaxed">
-            <p className="mb-4">
-              Founded in 2023, our platform emerged from a simple yet powerful idea: 
-              to create a space where technology professionals could connect, share, 
-              and grow together. What started as a small blog has evolved into a 
-              comprehensive community platform.
-            </p>
-            <p>
-              We recognized the challenges of staying updated in the rapidly changing 
-              tech landscape and decided to build a solution that makes learning 
-              collaborative, accessible, and engaging.
+        {/* Story Section with Icon */}
+        <section className="mb-8 ml-7 shadow-md px-6 py-6 bg-blue-50 rounded-lg flex items-center gap-4">
+          <FaRocket className="text-6xl text-blue-700" />
+          <div>
+            <h2 className="text-3xl font-semibold mb-2 text-gray-800">Our Story</h2>
+            <p className="text-gray-700 leading-relaxed">
+              Founded in 2023, our journey started with a vision: to connect innovation enthusiasts through collaboration and shared insights.
             </p>
           </div>
         </section>
 
         {/* Team Members Section */}
-        <section className='px-4 ml-7'>
-          <h2 className="text-3xl font-semibold text-center mb-8 text-pink-400">Meet Our Team</h2>
+        <section className="px-4 mb-8">
+          <h2 className="text-3xl font-semibold text-center mb-4 text-gray-800">Meet Our Team</h2>
           <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
             {teamMembers.map((member, index) => (
-              <div 
-                key={index} 
-                className="bg-gray-50 shadow-md rounded-lg p-4 text-center hover:scale-105 transition-transform duration-200 max-w-sm mx-auto"
+              <div
+                key={index}
+                className="bg-white shadow-md rounded-lg p-4 text-center hover:scale-105 transition-transform duration-200 max-w-sm mx-auto"
               >
-                <img 
-                  src={member.image} 
-                  alt={member.name} 
-                  className="w-24 h-24 rounded-full mx-auto mb-2 object-cover"
+                <img
+                  src={member.image}
+                  alt={member.name}
+                  className="w-20 h-20 rounded-full mx-auto mb-2 object-cover"
                 />
-                <h3 className="text-lg font-bold text-pink-400">{member.name}</h3>
-                <p className="text-gray-600 text-sm mb-2">{member.role}</p>
-                <p className="text-gray-500 text-sm leading-relaxed">{member.bio}</p>
+                <h3 className="text-lg font-semibold text-gray-800">{member.name}</h3>
+                <p className="text-sm text-gray-500 mb-2">{member.role}</p>
+                <p className="text-gray-600 text-sm leading-tight">{member.bio}</p>
               </div>
             ))}
           </div>
         </section>
 
         {/* CTA Section */}
-        <section className="mt-12 text-center">
-          <h2 className="text-3xl font-semibold mb-6 text-pink-400">Join Our Community</h2>
-          <div className="bg-pink-400 text-white rounded-lg p-6 shadow-md inline-block max-w-sm mx-auto">
-            <p className="mb-4 leading-relaxed">
-              Whether you're a seasoned professional or just starting your tech journey, 
-              there's a place for you in our community.
-            </p>
-            <button className="bg-pink-600 text-white py-2 px-4 rounded-md transition duration-200">
-              Get Started
-            </button>
-          </div>
+        <section className="mt-8 ml-7 bg-pink-400 text-white rounded-lg p-6 shadow-md hover:bg-pink-600 transition duration-200 text-center">
+          <h2 className="text-2xl font-bold mb-4">Join Our Community Today!</h2>
+          <p className="mb-4 text-gray-100 leading-relaxed">
+            Whether you're a coder, designer, or innovator, our space is ready for your journey.
+          </p>
+          <button className="bg-white text-pink-700 px-6 py-2 rounded-md shadow-lg hover:bg-gray-100 transition duration-200">
+            Get Started
+          </button>
         </section>
       </div>
     </div>

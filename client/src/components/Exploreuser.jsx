@@ -22,6 +22,7 @@ function Exploreuser() {
     console.log(users);
     
   return (
+    <div className='h-screen'>
     <div className='mt-[70px] md:ml-[400px]'>
         <ToastContainer />
         <h1 className='text-2xl mb-10'>Explore post for {users.length==1 ? "this user" : "these users" }</h1> 
@@ -43,6 +44,7 @@ function Exploreuser() {
               ))}
             </ul>
           )}
+            </div>
             </div>
   )
 }

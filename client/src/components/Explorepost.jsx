@@ -68,6 +68,7 @@ function Explorepost() {
     console.log(post)
 
     return (
+        <div className='h-screen'>
         <div className='mt-[70px] md:ml-6'>
             <ToastContainer />
             <div className="space-y-10">
@@ -103,6 +104,7 @@ function Explorepost() {
                     </div>
                 ))}
             </div>
+        </div>
         </div>
     )
 }

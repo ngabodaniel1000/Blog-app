@@ -75,6 +75,7 @@ const Adminsignup = () => {
   };
 
   return (
+    <div className='h-screen'>
     <form
     className="mt-24 max-w-md mx-auto bg-white p-8 text-gray-900 border border-gray-200 rounded-lg shadow-md"
     onSubmit={handleSubmit}
@@ -155,7 +156,7 @@ const Adminsignup = () => {
       </button>
     </div>
   </form>
-  
+  </div>
   );
 };
 
