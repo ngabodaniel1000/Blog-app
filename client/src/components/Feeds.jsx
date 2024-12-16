@@ -117,54 +117,77 @@ const Feeds = () => {
   );
 
   return (
-    <div className="flex flex-col md:flex-row mt-5 bg-[#000005] overflow-y-auto h-full w-full">
-      <ToastContainer />
-      <div className='w-full md:w-[70%] px-4'>
+    <div className="flex flex-col md:flex-row bg-[#F5F5F5] h-full w-full">
+    <ToastContainer />
   
+    <div className="flex items-center justify-center w-full">
+      {/* Feed Container */}
+      <div className="w-full md:w-[60%] px-4 mt-5 overflow-y-auto">
         {loading ? (
           <LoadingSpinner />
         ) : (
-          <>
-            <div className="space-y-10">
-              {postsdata.map((post) => (
-                <div key={post._id} className="bg-[#191919] p-4 rounded-md">
-                  {post.imageUrl && (
+          <div className="space-y-6">
+            {postsdata.map((post) => (
+              <div
+                key={post._id}
+                className="bg-[#FFFFFF] p-4 rounded-md shadow-md max-w-[500px] mx-auto transition duration-200 hover:shadow-lg"
+              >
+                {/* Instagram-like Square Image */}
+                {post.imageUrl && (
+                  <div className="relative w-full aspect-square mb-4 overflow-hidden rounded-lg">
                     <img
                       src={post.imageUrl}
                       alt={post.posttitle}
-                      className="w-full h-auto mb-4 rounded"
+                      className="absolute top-0 left-0 w-full h-full object-cover"
                     />
-                  )}
-                  <h3 className="text-xl font-bold text-white mb-2">
-                    {post.posttitle === "Untitled" ? ' ' : post.posttitle }
-                  </h3>
-                  <p className="text-gray-300 mb-2">{post.postcontent}</p>
-  
-                  <div className="flex items-center space-x-4 mb-2">
-                    
-                    <div className="flex items-center space-x-2">
-                      <FontAwesomeIcon onClick={() => handleLike(post._id)} icon={faThumbsUp} className="text-red-400 cursor-pointer text-xl" />
-                      <span className="text-gray-400">{post.postlikes}</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <FontAwesomeIcon icon={faComment} className="text-gray-400" />
-                      <span className="text-gray-400">{post.postcomments.length}  {post.postcomments.length <= 1 ? "comment":"Comments"}</span>
-                    </div>
-                  
                   </div>
-                  <Link to={`/post/${post._id}`} className="w-full max-w-[200px]">
-                    <button className="bg-blue-500 text-white px-4 py-2 rounded w-full">
-                      Read more
-                    </button>
-                  </Link>
-                </div>
-              ))}
-            </div>
+                )}
   
-          </>
+                {/* Post Title */}
+                <h3 className="text-xl font-bold text-gray-800 mb-2">
+                  {post.posttitle === "Untitled" ? " " : post.posttitle}
+                </h3>
+  
+                {/* Post Content */}
+                <p className="text-gray-600 mb-2 leading-relaxed">{post.postcontent}</p>
+  
+                {/* Actions (Like, Comment, etc.) */}
+                <div className="flex items-center space-x-4 mb-2">
+                  <div className="flex items-center space-x-2">
+                    <FontAwesomeIcon
+                      onClick={() => handleLike(post._id)}
+                      icon={faThumbsUp}
+                      className="text-[#FFABAB] cursor-pointer text-xl"
+                    />
+                    <span className="text-gray-600">{post.postlikes}</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <FontAwesomeIcon icon={faComment} className="text-gray-600" />
+                    <span className="text-gray-600">
+                      {post.postcomments.length}{" "}
+                      {post.postcomments.length <= 1 ? "comment" : "Comments"}
+                    </span>
+                  </div>
+                </div>
+  
+                {/* Read More Button */}
+                <Link
+                  to={`/post/${post._id}`}
+                  className="w-full max-w-[150px] mx-auto"
+                >
+                  <button className="bg-[#FFABAB] text-white px-4 py-2 rounded-md shadow-sm hover:bg-[#FF6F61] transition duration-200">
+                    Read more
+                  </button>
+                </Link>
+              </div>
+            ))}
+          </div>
         )}
       </div>
     </div>
+  </div>
+  
+
   );
 }
 

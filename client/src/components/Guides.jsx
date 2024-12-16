@@ -1,4 +1,6 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faQuestionCircle } from '@fortawesome/free-solid-svg-icons';
 
 function Guide() {
   const [activeSection, setActiveSection] = useState(null);
@@ -62,17 +64,21 @@ function Guide() {
   };
 
   return (
-    <div className="mt-[-70px] md:ml-6 mx-auto p-4 bg-gray-900 bg-opacity-10 min-h-screen text-white">
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="text-4xl font-bold mt-10 mb-8 text-center">User Guide & Help Center</h1>
+    <div className=" mt-[10px]  md:ml-6 mx-auto p-6 bg-[#F5F5F5] min-h-screen text-gray-800">
+      <div className="container md:w-[70%] w-full mx-auto px-4 py-8">
+        {/* Page Header */}
+        <h1 className="text-4xl font-bold mt-4 mb-8 text-center text-slate-700">User Guide & Help Center</h1>
 
-        {/* User Guide Section */}
-        <section className="mb-12">
-          <h2 className="text-3xl font-semibold mb-6 text-center">Getting Started Guide</h2>
+        {/* Guide Section */}
+        <section className="mb-12 bg-white bg-opacity-80 p-6 rounded-lg shadow-md">
+          <h2 className="text-2xl font-semibold mb-4 text-pink-300 text-center">Getting Started Guide</h2>
           {guideSteps.map((guide, index) => (
-            <div key={index} className="bg-gray-800 bg-opacity-20 rounded-lg p-6 mb-4">
-              <h3 className="text-2xl font-bold mb-4 text-blue-400">{guide.title}</h3>
-              <ul className="list-disc pl-6 space-y-2 text-gray-300">
+            <div
+              key={index}
+              className="bg-white rounded-lg shadow-md p-4 mb-4 border border-pink-100"
+            >
+              <h3 className="text-lg font-semibold text-pink-500 mb-3">{guide.title}</h3>
+              <ul className="list-disc pl-5 space-y-2 text-gray-600 text-sm">
                 {guide.steps.map((step, stepIndex) => (
                   <li key={stepIndex}>{step}</li>
                 ))}
@@ -82,24 +88,24 @@ function Guide() {
         </section>
 
         {/* FAQ Section */}
-        <section>
-          <h2 className="text-3xl font-semibold mb-6 text-center">Frequently Asked Questions</h2>
+        <section className="mb-12 bg-white bg-opacity-80 p-6 rounded-lg shadow-md">
+          <h2 className="text-2xl font-semibold mb-4 text-center text-pink-600">Frequently Asked Questions</h2>
           {faqData.map((faq, index) => (
             <div 
               key={index} 
-              className="bg-gray-800 bg-gray-800 bg-opacity-20 rounded-lg mb-4 overflow-hidden"
+              className="bg-white bg-opacity-80 rounded-lg mb-4 shadow-md"
             >
               <div 
                 onClick={() => toggleSection(index)}
-                className="flex justify-between items-center p-6 cursor-pointer hover:bg-gray-700 transition"
+                className="flex justify-between items-center p-4 cursor-pointer hover:bg-pink-100 transition duration-300"
               >
-                <h3 className="text-xl font-semibold">{faq.question}</h3>
-                <span className="text-2xl">
+                <h3 className="text-md font-semibold text-gray-700">{faq.question}</h3>
+                <span className="text-lg text-gray-500">
                   {activeSection === index ? '−' : '+'}
                 </span>
               </div>
               {activeSection === index && (
-                <div className="p-6 pt-0 text-gray-300">
+                <div className="p-4 pt-2 text-gray-600 text-sm leading-relaxed">
                   {faq.answer}
                 </div>
               )}
@@ -107,24 +113,23 @@ function Guide() {
           ))}
         </section>
 
-        {/* Additional Help */}
-        <section className="mt-12 text-center">
-          <h2 className="text-3xl font-semibold mb-6">Need More Help?</h2>
-          <div className="bg-gray-800 bg-opacity-30 rounded-lg p-8">
-            <p className="mb-4 text-gray-300">
-              If you can't find the answer you're looking for, don't hesitate to contact our support team.
-            </p>
-            <a href="/contact"><button 
-              className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-md transition duration-300"
+        {/* Additional Help Section */}
+        <section className="mt-8 text-center bg-[#F5F5F5] rounded-lg p-8 shadow-lg">
+          <h2 className="text-xl font-semibold mb-4 text-pink-600">Need More Help?</h2>
+          <p className="text-gray-700 mb-4 text-sm">
+            If you can't find the answer you're looking for, don't hesitate to contact our support team.
+          </p>
+          <a href="/contact">
+            <button
+              className="bg-pink-400 hover:bg-pink-500 text-white font-semibold py-2 px-5 rounded-md transition duration-300"
             >
               Contact Support
             </button>
-            </a>
-          </div>
+          </a>
         </section>
       </div>
     </div>
-  )
+  );
 }
 
-export default Guide
+export default Guide;

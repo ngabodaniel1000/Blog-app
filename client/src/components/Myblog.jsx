@@ -1,109 +1,138 @@
-import { faComment, faThumbsUp } from '@fortawesome/free-solid-svg-icons'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import axios from 'axios'
-import { toast,ToastContainer } from 'react-toastify'
-import React, { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { faComment, faThumbsUp } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import axios from 'axios';
+import { toast, ToastContainer } from 'react-toastify';
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function Myblog() {
-  const [myblog, Setmyblog] = useState([])
-  const userid = localStorage.getItem('user id')
-useEffect(() => {
-  const getmypost = async () => {
-    const response = await axios.get(`http://localhost:4999/post/mypost/${userid}`, { withCredentials: true , headers: { 'Content-Type': 'application/json' }});
-    if(response.status === 200){
-      Setmyblog(response.data.mypost)
-    }
-  }
-  getmypost()
-},[])
-console.log(myblog);
+  const [myblog, Setmyblog] = useState([]);
+  const userid = localStorage.getItem('user id');
 
-const handleLike = async (postId) => {
-  try {
-    const response = await axios.put(`http://localhost:4999/post/like/${postId}`, {}, { withCredentials: true });
-    if (response.data.message === "Unauthorized to this api") {
-      toast.error("Please sign in to like the post!", {
-        position: "top-right",
-        autoClose: 10000,
-        hideProgressBar: false,
-        pauseOnHover: true,
-        draggable: true,
-      });
-      return;
+  useEffect(() => {
+    const getmypost = async () => {
+      try {
+        const response = await axios.get(
+          `http://localhost:4999/post/mypost/${userid}`,
+          { withCredentials: true, headers: { 'Content-Type': 'application/json' } }
+        );
+        if (response.status === 200) {
+          Setmyblog(response.data.mypost);
+        }
+      } catch (error) {
+        toast.error("Failed to fetch your posts.", {
+          position: "top-right",
+          autoClose: 5000,
+        });
+      }
+    };
+    getmypost();
+  }, []);
+
+  const handleLike = async (postId) => {
+    try {
+      const response = await axios.put(
+        `http://localhost:4999/post/like/${postId}`,
+        {},
+        { withCredentials: true }
+      );
+      if (response.data.message === "Unauthorized to this api") {
+        toast.error("Please sign in to like the post!", {
+          position: "top-right",
+          autoClose: 10000,
+        });
+        return;
+      }
+      if (response.data.message === "You have already liked this post") {
+        toast.warning(response.data.message, {
+          position: "top-right",
+          autoClose: 10000,
+        });
+      } else {
+        toast.success("Post liked!", {
+          position: "top-right",
+          autoClose: 10000,
+        });
+      }
+    } catch (error) {
+      console.error("Error liking post:", error);
+      toast.error("Failed to like post.");
     }
-    if (response.data.message === "You have already liked this post") {
-      toast.warning(response.data.message, {
-        position: "top-right",
-        autoClose: 10000,
-        hideProgressBar: false,
-        pauseOnHover: true,
-        draggable: true,
-        theme: 'light'
-      });
-    } else {
-      setPostsdata(postsdata.map(post => post._id === postId ? { ...post, postlikes: post.postlikes + 1 } : post));
-      toast.success("Post liked!", {
-        position: "top-right",
-        autoClose: 10000,
-        hideProgressBar: true,
-        pauseOnHover: true,
-        draggable: true,
-      });
-    }
-  } catch (error) {
-    console.error('Error liking post:', error);
-    toast.error("Failed to like post. Login to like the post!", {
-      position: "bottom-right",
-      autoClose: 10000,
-      hideProgressBar: false,
-      pauseOnHover: true,
-      draggable: true,
-    });
-  }
-};
+  };
 
   return (
-    <div className="mt-[70px] md:ml-6 mx-auto p-4">
-   <div>
-    <ToastContainer />
-    <div><h1 className='text-2xl md:ml-[450px] mb-5'>My latest blogs</h1></div>
-              {myblog.map((post) => (
-                <div key={post._id} className="bg-[#191919] mt-5 p-4 rounded-md">
-                  {post.imageUrl && (
-                    <img
-                      src={post.imageUrl}
-                      alt={post.posttitle}
-                      className="w-full h-auto mb-4 rounded"
-                    />
-                  )}
-                  <h3 className="text-xl font-bold text-white mb-2">
-                    {post.posttitle === "Untitled" ? ' ' : post.posttitle }
-                  </h3>
-                  <p className="text-gray-300 mb-2">{post.postcontent}</p>
-  
-                  <div className="flex items-center space-x-4 mb-2">
-                    
-                    <div className="flex items-center space-x-2">
-                      <FontAwesomeIcon onClick={() => handleLike(post._id)} icon={faThumbsUp} className="text-red-400 cursor-pointer text-xl" />
-                      <span className="text-gray-400">{post.postlikes}</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <FontAwesomeIcon icon={faComment} className="text-gray-400" />
-                      <span className="text-gray-400">{post.postcomments.length}  {post.postcomments.length <= 1 ? "comment":"Comments"}</span>
-                    </div>
-                  
-                  </div>
-                  <Link to={`/post/${post._id}`} className="w-full max-w-[200px]">
-                    <button className="bg-blue-500 text-white px-4 py-2 rounded w-full">
-                      Read more
-                    </button>
-                  </Link>
-                </div>
-              ))}
+    <div className='h-screen'>
+    <div className="mt-[70px] md:mt-[60px] mx-auto p-4 max-w-screen-lg max-h-screen bg-[#F5F5F5]">
+      {/* Toast Notifications */}
+      <ToastContainer />
+
+      {/* Section Header */}
+      <h1 className="text-2xl md:text-3xl text-gray-800 mb-6 text-center font-semibold">
+        My Latest Blogs
+      </h1>
+
+      {/* Grid for Blog Cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        {myblog.map((post) => (
+          <div
+            key={post._id}
+            className="bg-[#FFFFFF] p-4 rounded-md shadow-md transition-transform transform hover:scale-105"
+          >
+            {/* Image Section */}
+            {post.imageUrl && (
+              <div className="relative w-full aspect-square mb-4 overflow-hidden rounded-lg">
+                <img
+                  src={post.imageUrl}
+                  alt={post.posttitle}
+                  className="absolute top-0 left-0 w-full h-full object-cover"
+                />
+              </div>
+            )}
+
+            {/* Post Title */}
+            <h3 className="text-lg font-semibold text-gray-800 mb-2 truncate leading-tight">
+              {post.posttitle === "Untitled" ? '' : post.posttitle}
+            </h3>
+
+            {/* Blog Content */}
+            <p className="text-sm text-gray-600 mb-3 leading-relaxed truncate">
+              {post.postcontent}
+            </p>
+
+            {/* Like and Comment Section */}
+            <div className="flex items-center justify-between mt-2 space-x-2">
+              <div className="flex items-center space-x-2 cursor-pointer">
+                <FontAwesomeIcon
+                  onClick={() => handleLike(post._id)}
+                  icon={faThumbsUp}
+                  className="text-[#FFABAB] text-xl cursor-pointer hover:text-[#FF6F61]"
+                />
+                <span className="text-gray-600">{post.postlikes}</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <FontAwesomeIcon
+                  icon={faComment}
+                  className="text-gray-600 text-lg hover:text-gray-800"
+                />
+                <span className="text-gray-600">
+                  {post.postcomments.length} {post.postcomments.length <= 1 ? "comment" : "comments"}
+                </span>
+              </div>
             </div>
-  </div>
-  )
+
+            {/* Read More Button */}
+            <Link
+              to={`/post/${post._id}`}
+              className="mt-3 w-full bg-[#FFABAB] text-white text-sm px-3 py-2 rounded-md text-center hover:bg-[#FF6F61] transition duration-200"
+            >
+              Read More
+            </Link>
+          </div>
+        ))}
+      </div>
+    </div>
+    </div>
+  );
 }
 
-export default Myblog
+export default Myblog;

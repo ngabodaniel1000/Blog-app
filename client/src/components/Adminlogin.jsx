@@ -74,67 +74,86 @@ const Adminlogin = () => {
   };
 
   return (
+    
     <form
-      className="mt-36 max-w-md mx-auto p-8 text-white border-gray-700 border-2 rounded-lg shadow-lg"
-      onSubmit={handleSubmit}
+  className="mt-24 max-w-md mx-auto bg-white p-8 text-gray-900 border border-gray-200 rounded-lg shadow-md"
+  onSubmit={handleSubmit}
+>
+  <ToastContainer />
+  <h2 className="text-3xl font-extrabold mb-6 text-center text-teal-600">
+    User Login
+  </h2>
+  
+  <div className="mb-6">
+    <label
+      className="block text-sm font-medium text-gray-700 mb-2"
+      htmlFor="username"
     >
-      <ToastContainer />
-      <h2 className="text-2xl font-bold mb-6 text-center">USER LOGIN</h2>
-        
-      <div className="mb-4">
-        <label className="block text-sm font-semibold mb-2" htmlFor="username">
-          Username
-        </label>
-        <input
-          className="w-full p-3 bg-gray-800 text-white border border-gray-700 rounded focus:outline-none focus:border-blue-500"
-          id="username"
-          type="text"
-          name="username"
-          value={username}
-          onChange={(event) => setUsername(event.target.value)}
-          placeholder="Your username"
-        />
-      </div>
-      
-      <div className="mb-4">
-        <label className="block text-sm font-semibold mb-2" htmlFor="password">
-          Password
-        </label>
-        <input
-          className="w-full p-3 bg-gray-800 text-white border border-gray-700 rounded focus:outline-none focus:border-blue-500"
-          id="password"
-          type="password"
-          value={password}
-          name="password"
-          onChange={(event) => setPassword(event.target.value)}
-          placeholder="Your password"
-        />
-      </div>
-      
-      <div className="flex justify-between items-center mb-4">
-        <label className="text-sm">
-          <input type="checkbox" className="mr-2" />
-          Remember Me
-        </label>
-      </div>
+      Username
+    </label>
+    <input
+      className="w-full p-3 text-gray-900 bg-gray-100 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-400"
+      id="username"
+      type="text"
+      name="username"
+      value={username}
+      onChange={(event) => setUsername(event.target.value)}
+      placeholder="Enter your username"
+    />
+  </div>
+  
+  <div className="mb-6">
+    <label
+      className="block text-sm font-medium text-gray-700 mb-2"
+      htmlFor="password"
+    >
+      Password
+    </label>
+    <input
+      className="w-full p-3 text-gray-900 bg-gray-100 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-400"
+      id="password"
+      type="password"
+      name="password"
+      value={password}
+      onChange={(event) => setPassword(event.target.value)}
+      placeholder="Enter your password"
+    />
+  </div>
+  
+  <div className="flex items-center justify-between mb-6">
+    <label className="flex items-center text-sm text-gray-600">
+      <input
+        type="checkbox"
+        className="w-4 h-4 text-teal-600 border-gray-300 rounded focus:ring-teal-500"
+      />
+      <span className="ml-2">Remember Me</span>
+    </label>
+    <a
+      href="#"
+      className="text-sm text-teal-500 hover:underline"
+    >
+      Forgot Password?
+    </a>
+  </div>
+  
+  <div className="flex items-center justify-between">
+    <button
+      className="bg-teal-600 hover:bg-teal-700 text-white font-semibold py-2 px-6 rounded-lg shadow"
+      type="submit"
+    >
+      Sign In
+    </button>
+    <span className="text-sm text-gray-500">OR</span>
+    <button
+      className="bg-gray-200 hover:bg-gray-300 text-gray-900 font-semibold py-2 px-6 rounded-lg shadow"
+      type="button"
+      onClick={() => navigate('/signup')}
+    >
+      Register
+    </button>
+  </div>
+</form>
 
-      <div className="flex items-center justify-between">
-        <button
-          className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded"
-          type="submit"
-        >
-          Sign In
-        </button>
-        <span className="text-sm text-gray-400">OR</span>
-        <button
-          className="bg-gray-700 hover:bg-gray-800 text-white font-bold py-2 px-6 rounded"
-          type="button"
-          onClick={() => navigate('/signup')}
-        >
-          Register
-        </button>
-      </div>
-    </form>
   );
 };
 

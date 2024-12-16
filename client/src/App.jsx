@@ -23,12 +23,11 @@ import Exploreuserpost from './components/Exploreuserpost';
 
 function App() {
   return (
-    <div className="bg-[#000005] text-white min-h-screen">
       <BrowserRouter>
         <Hidenavbar />
         <Hidesidebar />
-        <div className="flex pt-[70px]">
-          <main className="flex-1 ml-0 md:ml-[240px] p-6">
+        <div className="flex bg-[#F5F5F5]">
+          <main className="flex-1 ml-0 p-6">
             <Routes>
               <Route path="/login" element={<Adminlogin />} />
               <Route path="/signup" element={<Adminsignup />} />
@@ -51,7 +50,6 @@ function App() {
           </main>
         </div>
       </BrowserRouter>
-    </div>
   );
 }
 

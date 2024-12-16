@@ -76,83 +76,86 @@ const Adminsignup = () => {
 
   return (
     <form
-      className="mt-36 max-w-md mx-auto p-8 bg-gray-900 text-white border-gray-700 border-2 rounded-lg shadow-lg"
-      onSubmit={handleSubmit}
-    >
-      <ToastContainer />
-      <h2 className="text-2xl font-bold mb-6 text-center">Sign Up</h2>
-      
-      <div className="mb-4">
-        <label
-          className="block text-sm font-semibold mb-2"
-          htmlFor="email"
-        >
-          Email
-        </label>
-        <input
-          className="w-full p-3 bg-gray-800 text-white border border-gray-700 rounded focus:outline-none focus:border-blue-500"
-          id="email"
-          type="email"
-          value={email}
-          name="email"
-          onChange={(event) => setEmail(event.target.value)}
-          placeholder="Your email"
-        />
-      </div>
-      
-      <div className="mb-4">
-        <label
-          className="block text-sm font-semibold mb-2"
-          htmlFor="username"
-        >
-          Username
-        </label>
-        <input
-          className="w-full p-3 bg-gray-800 text-white border border-gray-700 rounded focus:outline-none focus:border-blue-500"
-          id="username"
-          type="text"
-          name="username"
-          value={username}
-          onChange={(event) => setUsername(event.target.value)}
-          placeholder="Your username"
-        />
-      </div>
-      
-      <div className="mb-4">
-        <label
-          className="block text-sm font-semibold mb-2"
-          htmlFor="password"
-        >
-          Password
-        </label>
-        <input
-          className="w-full p-3 bg-gray-800 text-white border border-gray-700 rounded focus:outline-none focus:border-blue-500"
-          id="password"
-          type="password"
-          name="password"
-          value={password}
-          onChange={(event) => setPassword(event.target.value)}
-          placeholder="Your password"
-        />
-      </div>
-      
-      <div className="flex items-center justify-between">
-        <button
-          className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded"
-          type="submit"
-        >
-          Sign up
-        </button>
-        <span className="text-sm text-gray-400">OR</span>
-        <button
-          className="bg-gray-700 hover:bg-gray-800 text-white font-bold py-2 px-6 rounded"
-          type="button"
-          onClick={() => navigate('/login')}
-        >
-          Sign in
-        </button>
-      </div>
-    </form>
+    className="mt-24 max-w-md mx-auto bg-white p-8 text-gray-900 border border-gray-200 rounded-lg shadow-md"
+    onSubmit={handleSubmit}
+  >
+    <ToastContainer />
+    <h2 className="text-3xl font-extrabold mb-6 text-center text-teal-600">
+      Sign Up
+    </h2>
+  
+    <div className="mb-6">
+      <label
+        className="block text-sm font-medium text-gray-700 mb-2"
+        htmlFor="email"
+      >
+        Email
+      </label>
+      <input
+        className="w-full p-3 text-gray-900 bg-gray-100 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-400"
+        id="email"
+        type="email"
+        value={email}
+        name="email"
+        onChange={(event) => setEmail(event.target.value)}
+        placeholder="Enter your email"
+      />
+    </div>
+  
+    <div className="mb-6">
+      <label
+        className="block text-sm font-medium text-gray-700 mb-2"
+        htmlFor="username"
+      >
+        Username
+      </label>
+      <input
+        className="w-full p-3 text-gray-900 bg-gray-100 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-400"
+        id="username"
+        type="text"
+        name="username"
+        value={username}
+        onChange={(event) => setUsername(event.target.value)}
+        placeholder="Choose a username"
+      />
+    </div>
+  
+    <div className="mb-6">
+      <label
+        className="block text-sm font-medium text-gray-700 mb-2"
+        htmlFor="password"
+      >
+        Password
+      </label>
+      <input
+        className="w-full p-3 text-gray-900 bg-gray-100 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-400"
+        id="password"
+        type="password"
+        name="password"
+        value={password}
+        onChange={(event) => setPassword(event.target.value)}
+        placeholder="Create a password"
+      />
+    </div>
+  
+    <div className="flex items-center justify-between">
+      <button
+        className="bg-teal-600 hover:bg-teal-700 text-white font-semibold py-2 px-6 rounded-lg shadow"
+        type="submit"
+      >
+        Sign Up
+      </button>
+      <span className="text-sm text-gray-500">OR</span>
+      <button
+        className="bg-gray-200 hover:bg-gray-300 text-gray-900 font-semibold py-2 px-6 rounded-lg shadow"
+        type="button"
+        onClick={() => navigate('/login')}
+      >
+        Sign In
+      </button>
+    </div>
+  </form>
+  
   );
 };
 
