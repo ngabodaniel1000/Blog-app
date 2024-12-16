@@ -1,0 +1,776 @@
+[{
+  "_id": {
+    "$oid": "672ba46ea7f49a97278fac2b"
+  },
+  "posttitle": "footballapp",
+  "postcontent": "Sky Sports Footsball - Live games, scores, latest football news, transfers, results, fixtures and team news from the Premier to the Champions League.",
+  "postlikes": 3,
+  "postcomments": [
+    "ffmff,mff",
+    {
+      "userId": {
+        "$oid": "672ba2fc903cdbc51adbc30d"
+      },
+      "username": "abc",
+      "createdAt": {
+        "$date": "2024-11-06T18:06:22.690Z"
+      },
+      "_id": {
+        "$oid": "672bb01ee2b1899b0577df4a"
+      }
+    },
+    {
+      "content": "good",
+      "userId": {
+        "$oid": "672ba2fc903cdbc51adbc30d"
+      },
+      "username": "abc",
+      "createdAt": {
+        "$date": "2024-11-06T18:08:26.535Z"
+      },
+      "_id": {
+        "$oid": "672bb09ae2b1899b0577df4f"
+      }
+    },
+    {
+      "content": "awesome",
+      "userId": {
+        "$oid": "672ba2fc903cdbc51adbc30d"
+      },
+      "username": "abc",
+      "createdAt": {
+        "$date": "2024-11-06T18:09:14.175Z"
+      },
+      "_id": {
+        "$oid": "672bb0cae2b1899b0577df55"
+      }
+    }
+  ],
+  "userposted": {
+    "$oid": "672ba2fc903cdbc51adbc30d"
+  },
+  "__v": 4,
+  "likedBy": [
+    {
+      "$oid": "672ba2fc903cdbc51adbc30d"
+    }
+  ]
+},
+{
+  "_id": {
+    "$oid": "6738614445e24b4d6879ad59"
+  },
+  "posttitle": "president of rwanda",
+  "postcontent": "prsident kagam paul is planning vacation",
+  "postlikes": 2,
+  "postcomments": [
+    {
+      "content": "good",
+      "userId": {
+        "$oid": "6731f911249b05ab4221bbb6"
+      },
+      "username": "ngabo",
+      "createdAt": {
+        "$date": "2024-12-07T17:23:54.086Z"
+      },
+      "_id": {
+        "$oid": "675484aa70169a7e496dfe7c"
+      }
+    },
+    {
+      "content": "",
+      "userId": {
+        "$oid": "6731f911249b05ab4221bbb6"
+      },
+      "username": "ngabo",
+      "createdAt": {
+        "$date": "2024-12-07T17:24:02.848Z"
+      },
+      "_id": {
+        "$oid": "675484b270169a7e496dfe83"
+      }
+    },
+    {
+      "content": "",
+      "userId": {
+        "$oid": "6731f911249b05ab4221bbb6"
+      },
+      "username": "ngabo",
+      "createdAt": {
+        "$date": "2024-12-07T17:41:09.508Z"
+      },
+      "_id": {
+        "$oid": "675488b570169a7e496e0164"
+      }
+    },
+    {
+      "content": "bad",
+      "userId": {
+        "$oid": "6731f911249b05ab4221bbb6"
+      },
+      "username": "ngabo",
+      "createdAt": {
+        "$date": "2024-12-07T17:44:02.989Z"
+      },
+      "_id": {
+        "$oid": "6754896270169a7e496e01d8"
+      }
+    }
+  ],
+  "userposted": {
+    "$oid": "6731f911249b05ab4221bbb6"
+  },
+  "likedBy": [
+    {
+      "$oid": "6731f911249b05ab4221bbb6"
+    },
+    {
+      "$oid": "672ba2fc903cdbc51adbc30d"
+    }
+  ],
+  "__v": 6,
+  "updatedAt": {
+    "$date": "2024-12-07T17:44:02.994Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "6738630c6933e6a19ae34683"
+  },
+  "posttitle": "nesa examination",
+  "postcontent": "The ongoing announcement indicates that 96.8% of candidates for the Primary Leaving Examination passed. Of these, girls passed at a rate of 97% while boys...",
+  "postlikes": 1,
+  "postcomments": [],
+  "userposted": {
+    "$oid": "6731f911249b05ab4221bbb6"
+  },
+  "likedBy": [
+    {
+      "$oid": "672ba2fc903cdbc51adbc30d"
+    }
+  ],
+  "__v": 1,
+  "updatedAt": {
+    "$date": "2024-11-21T14:19:56.131Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "673b4b9bf32d4a7eb3ae1035"
+  },
+  "posttitle": "blog 1",
+  "postcontent": "lorem ipsum",
+  "imageUrl": "https://res.cloudinary.com/deax72mws/image/upload/v1731939231/g818z5rxwbmfrtshzjpr.jpg",
+  "postlikes": 1,
+  "postcomments": [],
+  "userposted": {
+    "$oid": "672ba2fc903cdbc51adbc30d"
+  },
+  "likedBy": [
+    {
+      "$oid": "672ba2fc903cdbc51adbc30d"
+    }
+  ],
+  "createdAt": {
+    "$date": "2024-11-18T14:13:47.224Z"
+  },
+  "updatedAt": {
+    "$date": "2024-11-20T17:02:58.276Z"
+  },
+  "__v": 1
+},
+{
+  "_id": {
+    "$oid": "673d751f68aee0a939385369"
+  },
+  "posttitle": "fklklf",
+  "postcontent": "ffkl",
+  "imageUrl": "https://res.cloudinary.com/deax72mws/image/upload/v1732080932/h7p2uwqf4jdctyzqgf6z.png",
+  "postlikes": 1,
+  "postcomments": [],
+  "userposted": {
+    "$oid": "672ba2fc903cdbc51adbc30d"
+  },
+  "likedBy": [
+    {
+      "$oid": "672ba2fc903cdbc51adbc30d"
+    }
+  ],
+  "createdAt": {
+    "$date": "2024-11-20T05:35:27.079Z"
+  },
+  "updatedAt": {
+    "$date": "2024-11-20T16:49:32.010Z"
+  },
+  "__v": 1
+},
+{
+  "_id": {
+    "$oid": "673d7d99dc07e4be15fc1c20"
+  },
+  "posttitle": "Untitled",
+  "postcontent": "vjvjvkjkvjkvjk",
+  "imageUrl": null,
+  "postlikes": 1,
+  "postcomments": [],
+  "userposted": {
+    "$oid": "672ba2fc903cdbc51adbc30d"
+  },
+  "likedBy": [
+    {
+      "$oid": "672ba2fc903cdbc51adbc30d"
+    }
+  ],
+  "createdAt": {
+    "$date": "2024-11-20T06:11:37.098Z"
+  },
+  "updatedAt": {
+    "$date": "2024-11-20T16:47:52.671Z"
+  },
+  "__v": 1
+},
+{
+  "_id": {
+    "$oid": "673f41bf348b6d246a026f99"
+  },
+  "posttitle": "dddd",
+  "postcontent": "jkfffkfjk",
+  "imageUrl": "https://res.cloudinary.com/deax72mws/image/upload/v1732198853/c27bncsswfgu7jlvwqbg.jpg",
+  "postlikes": 1,
+  "postcomments": [
+    {
+      "content": "Foooo",
+      "userId": {
+        "$oid": "672ba2fc903cdbc51adbc30d"
+      },
+      "username": "abc",
+      "createdAt": {
+        "$date": "2024-12-07T18:05:24.312Z"
+      },
+      "_id": {
+        "$oid": "67548e641927d45b2d9a1d33"
+      }
+    }
+  ],
+  "userposted": {
+    "$oid": "672ba2fc903cdbc51adbc30d"
+  },
+  "likedBy": [
+    {
+      "$oid": "672ba2fc903cdbc51adbc30d"
+    }
+  ],
+  "createdAt": {
+    "$date": "2024-11-21T14:20:47.068Z"
+  },
+  "updatedAt": {
+    "$date": "2024-12-07T18:05:24.321Z"
+  },
+  "__v": 2
+},
+{
+  "_id": {
+    "$oid": "673f4a39068b1716d5350140"
+  },
+  "posttitle": "Untitled",
+  "postcontent": "hello world prosa",
+  "imageUrl": null,
+  "postlikes": 2,
+  "postcomments": [],
+  "userposted": {
+    "$oid": "672ba2fc903cdbc51adbc30d"
+  },
+  "likedBy": [
+    {
+      "$oid": "672ba2fc903cdbc51adbc30d"
+    },
+    {
+      "$oid": "6731f911249b05ab4221bbb6"
+    }
+  ],
+  "createdAt": {
+    "$date": "2024-11-21T14:56:57.317Z"
+  },
+  "updatedAt": {
+    "$date": "2024-12-14T19:38:06.863Z"
+  },
+  "__v": 2
+},
+{
+  "_id": {
+    "$oid": "673f4e81068b1716d5350274"
+  },
+  "posttitle": "Untitled",
+  "postcontent": "fjjkfkjfjkf",
+  "imageUrl": null,
+  "postlikes": 2,
+  "postcomments": [],
+  "userposted": {
+    "$oid": "672ba2fc903cdbc51adbc30d"
+  },
+  "likedBy": [
+    {
+      "$oid": "672ba2fc903cdbc51adbc30d"
+    },
+    {
+      "$oid": "6731f911249b05ab4221bbb6"
+    }
+  ],
+  "createdAt": {
+    "$date": "2024-11-21T15:15:13.126Z"
+  },
+  "updatedAt": {
+    "$date": "2024-12-14T19:38:33.644Z"
+  },
+  "__v": 2
+},
+{
+  "_id": {
+    "$oid": "673f4e85068b1716d5350276"
+  },
+  "posttitle": "Untitled",
+  "postcontent": "ffjkjkfkjgjkgjkgjk",
+  "imageUrl": null,
+  "postlikes": 2,
+  "postcomments": [],
+  "userposted": {
+    "$oid": "672ba2fc903cdbc51adbc30d"
+  },
+  "likedBy": [
+    {
+      "$oid": "672ba2fc903cdbc51adbc30d"
+    },
+    {
+      "$oid": "6731f911249b05ab4221bbb6"
+    }
+  ],
+  "createdAt": {
+    "$date": "2024-11-21T15:15:17.564Z"
+  },
+  "updatedAt": {
+    "$date": "2024-12-14T18:16:48.782Z"
+  },
+  "__v": 2
+},
+{
+  "_id": {
+    "$oid": "673f4e8a068b1716d5350278"
+  },
+  "posttitle": "Untitled",
+  "postcontent": "89895389iogigg",
+  "imageUrl": null,
+  "postlikes": 1,
+  "postcomments": [],
+  "userposted": {
+    "$oid": "672ba2fc903cdbc51adbc30d"
+  },
+  "likedBy": [
+    {
+      "$oid": "672ba2fc903cdbc51adbc30d"
+    }
+  ],
+  "createdAt": {
+    "$date": "2024-11-21T15:15:22.126Z"
+  },
+  "updatedAt": {
+    "$date": "2024-11-23T13:18:31.337Z"
+  },
+  "__v": 1
+},
+{
+  "_id": {
+    "$oid": "674087619855dd2c724a460b"
+  },
+  "posttitle": "Untitled",
+  "postcontent": "ckdkl",
+  "imageUrl": null,
+  "postlikes": 1,
+  "postcomments": [],
+  "userposted": {
+    "$oid": "672ba2fc903cdbc51adbc30d"
+  },
+  "likedBy": [
+    {
+      "$oid": "672ba2fc903cdbc51adbc30d"
+    }
+  ],
+  "createdAt": {
+    "$date": "2024-11-22T13:30:09.782Z"
+  },
+  "updatedAt": {
+    "$date": "2024-11-22T13:49:38.264Z"
+  },
+  "__v": 1
+},
+{
+  "_id": {
+    "$oid": "674087ee3f7dd702bffc0fc9"
+  },
+  "posttitle": "jkjke",
+  "postcontent": "ejekejkejkejk",
+  "imageUrl": null,
+  "postlikes": 1,
+  "postcomments": [],
+  "userposted": {
+    "$oid": "672ba2fc903cdbc51adbc30d"
+  },
+  "likedBy": [
+    {
+      "$oid": "672ba2fc903cdbc51adbc30d"
+    }
+  ],
+  "createdAt": {
+    "$date": "2024-11-22T13:32:30.507Z"
+  },
+  "updatedAt": {
+    "$date": "2024-11-23T13:04:10.538Z"
+  },
+  "__v": 1
+},
+{
+  "_id": {
+    "$oid": "6741e174cacb9974c5b80001"
+  },
+  "posttitle": "Untitled",
+  "postcontent": "obed",
+  "imageUrl": null,
+  "postlikes": 1,
+  "postcomments": [],
+  "userposted": {
+    "$oid": "672ba2fc903cdbc51adbc30d"
+  },
+  "likedBy": [
+    {
+      "$oid": "6731f911249b05ab4221bbb6"
+    }
+  ],
+  "createdAt": {
+    "$date": "2024-11-23T14:06:44.057Z"
+  },
+  "updatedAt": {
+    "$date": "2024-12-14T18:08:03.706Z"
+  },
+  "__v": 1
+},
+{
+  "_id": {
+    "$oid": "6741e21ccacb9974c5b80011"
+  },
+  "posttitle": "Untitled",
+  "postcontent": "abc",
+  "imageUrl": null,
+  "postlikes": 1,
+  "postcomments": [],
+  "userposted": {
+    "$oid": "672ba2fc903cdbc51adbc30d"
+  },
+  "likedBy": [
+    {
+      "$oid": "6731f911249b05ab4221bbb6"
+    }
+  ],
+  "createdAt": {
+    "$date": "2024-11-23T14:09:32.161Z"
+  },
+  "updatedAt": {
+    "$date": "2024-12-14T18:12:01.029Z"
+  },
+  "__v": 1
+},
+{
+  "_id": {
+    "$oid": "6741e22bcacb9974c5b80017"
+  },
+  "posttitle": "Untitled",
+  "postcontent": "dddjkdjk",
+  "imageUrl": null,
+  "postlikes": 1,
+  "postcomments": [
+    {
+      "content": "good",
+      "userId": {
+        "$oid": "672ba2fc903cdbc51adbc30d"
+      },
+      "username": "abc",
+      "createdAt": {
+        "$date": "2024-12-14T17:57:53.259Z"
+      },
+      "_id": {
+        "$oid": "675dc721b4cd3edb92e526fc"
+      }
+    }
+  ],
+  "userposted": {
+    "$oid": "672ba2fc903cdbc51adbc30d"
+  },
+  "likedBy": [
+    {
+      "$oid": "672ba2fc903cdbc51adbc30d"
+    }
+  ],
+  "createdAt": {
+    "$date": "2024-11-23T14:09:47.214Z"
+  },
+  "updatedAt": {
+    "$date": "2024-12-14T17:57:53.262Z"
+  },
+  "__v": 2
+},
+{
+  "_id": {
+    "$oid": "6741e247cacb9974c5b8001f"
+  },
+  "posttitle": "Untitled",
+  "postcontent": "i am",
+  "imageUrl": null,
+  "postlikes": 2,
+  "postcomments": [
+    {
+      "content": "dd",
+      "userId": {
+        "$oid": "6731f911249b05ab4221bbb6"
+      },
+      "username": "ngabo",
+      "createdAt": {
+        "$date": "2024-12-07T17:54:57.137Z"
+      },
+      "_id": {
+        "$oid": "67548bf1ea0aac4885ea2e2c"
+      }
+    }
+  ],
+  "userposted": {
+    "$oid": "672ba2fc903cdbc51adbc30d"
+  },
+  "likedBy": [
+    {
+      "$oid": "672ba2fc903cdbc51adbc30d"
+    },
+    {
+      "$oid": "6731f911249b05ab4221bbb6"
+    }
+  ],
+  "createdAt": {
+    "$date": "2024-11-23T14:10:15.074Z"
+  },
+  "updatedAt": {
+    "$date": "2024-12-07T17:54:57.140Z"
+  },
+  "__v": 3
+},
+{
+  "_id": {
+    "$oid": "67438310e7879459f6781eb1"
+  },
+  "posttitle": "greet",
+  "postcontent": "hello programmers",
+  "imageUrl": null,
+  "postlikes": 2,
+  "postcomments": [],
+  "userposted": {
+    "$oid": "672ba2fc903cdbc51adbc30d"
+  },
+  "likedBy": [
+    {
+      "$oid": "672ba2fc903cdbc51adbc30d"
+    },
+    {
+      "$oid": "6731f911249b05ab4221bbb6"
+    }
+  ],
+  "createdAt": {
+    "$date": "2024-11-24T19:48:32.742Z"
+  },
+  "updatedAt": {
+    "$date": "2024-12-14T18:10:36.253Z"
+  },
+  "__v": 2
+},
+{
+  "_id": {
+    "$oid": "6743831ce7879459f6781eb7"
+  },
+  "posttitle": "Untitled",
+  "postcontent": "klfkffklflk",
+  "imageUrl": null,
+  "postlikes": 2,
+  "postcomments": [],
+  "userposted": {
+    "$oid": "672ba2fc903cdbc51adbc30d"
+  },
+  "likedBy": [
+    {
+      "$oid": "672ba2fc903cdbc51adbc30d"
+    },
+    {
+      "$oid": "6731f911249b05ab4221bbb6"
+    }
+  ],
+  "createdAt": {
+    "$date": "2024-11-24T19:48:44.661Z"
+  },
+  "updatedAt": {
+    "$date": "2024-12-14T18:09:08.605Z"
+  },
+  "__v": 2
+},
+{
+  "_id": {
+    "$oid": "674475c6587e391db23fa182"
+  },
+  "posttitle": "new post",
+  "postcontent": "this is description of new post",
+  "imageUrl": "https://res.cloudinary.com/deax72mws/image/upload/v1732539846/uiyypmyfoourtpwhbtbw.jpg",
+  "postlikes": 2,
+  "postcomments": [
+    {
+      "content": "fklfklfkl",
+      "createdAt": {
+        "$date": "2024-12-05T15:11:06.126Z"
+      },
+      "_id": {
+        "$oid": "6751c28a32083ed38b7127ab"
+      }
+    },
+    {
+      "content": "kagabo",
+      "createdAt": {
+        "$date": "2024-12-05T15:11:29.041Z"
+      },
+      "_id": {
+        "$oid": "6751c2a132083ed38b7127b5"
+      }
+    },
+    {
+      "content": "",
+      "createdAt": {
+        "$date": "2024-12-05T15:12:25.286Z"
+      },
+      "_id": {
+        "$oid": "6751c2d932083ed38b7127ce"
+      }
+    },
+    {
+      "content": "jfjfjkfjk",
+      "createdAt": {
+        "$date": "2024-12-05T15:29:36.035Z"
+      },
+      "_id": {
+        "$oid": "6751c6e0506d20818149aa92"
+      }
+    },
+    {
+      "content": "hjgjhg",
+      "createdAt": {
+        "$date": "2024-12-05T15:29:46.173Z"
+      },
+      "_id": {
+        "$oid": "6751c6ea506d20818149aaa5"
+      }
+    },
+    {
+      "content": "fjkfjkfjk",
+      "createdAt": {
+        "$date": "2024-12-06T19:37:41.870Z"
+      },
+      "_id": {
+        "$oid": "675352859a5960da72fa4cf0"
+      }
+    },
+    {
+      "content": "fffffff",
+      "createdAt": {
+        "$date": "2024-12-06T19:38:19.172Z"
+      },
+      "_id": {
+        "$oid": "675352ab9a5960da72fa4d09"
+      }
+    },
+    {
+      "content": "auth",
+      "userId": {
+        "$oid": "672ba2fc903cdbc51adbc30d"
+      },
+      "username": "abc",
+      "createdAt": {
+        "$date": "2024-12-06T19:41:17.994Z"
+      },
+      "_id": {
+        "$oid": "6753535d1537639d5bf26c4f"
+      }
+    },
+    {
+      "content": "hello",
+      "userId": {
+        "$oid": "672ba2fc903cdbc51adbc30d"
+      },
+      "username": "abc",
+      "createdAt": {
+        "$date": "2024-12-14T07:16:20.215Z"
+      },
+      "_id": {
+        "$oid": "675d30c4786e1b025b447338"
+      }
+    }
+  ],
+  "userposted": {
+    "$oid": "672ba2fc903cdbc51adbc30d"
+  },
+  "likedBy": [
+    {
+      "$oid": "672ba2fc903cdbc51adbc30d"
+    },
+    {
+      "$oid": "6731f911249b05ab4221bbb6"
+    }
+  ],
+  "createdAt": {
+    "$date": "2024-11-25T13:04:06.253Z"
+  },
+  "updatedAt": {
+    "$date": "2024-12-14T07:16:20.230Z"
+  },
+  "__v": 11
+},
+{
+  "_id": {
+    "$oid": "6753e022d901c09f19549f7d"
+  },
+  "posttitle": "Untitled",
+  "postcontent": "hello world pros",
+  "imageUrl": null,
+  "postlikes": 2,
+  "postcomments": [
+    {
+      "content": "good",
+      "userId": {
+        "$oid": "6731f911249b05ab4221bbb6"
+      },
+      "username": "ngabo",
+      "createdAt": {
+        "$date": "2024-12-07T05:42:21.652Z"
+      },
+      "_id": {
+        "$oid": "6753e03dd901c09f19549f9a"
+      }
+    }
+  ],
+  "userposted": {
+    "$oid": "6731f911249b05ab4221bbb6"
+  },
+  "likedBy": [
+    {
+      "$oid": "6731f911249b05ab4221bbb6"
+    },
+    {
+      "$oid": "672ba2fc903cdbc51adbc30d"
+    }
+  ],
+  "createdAt": {
+    "$date": "2024-12-07T05:41:54.180Z"
+  },
+  "updatedAt": {
+    "$date": "2024-12-14T17:55:00.128Z"
+  },
+  "__v": 3
+}]
